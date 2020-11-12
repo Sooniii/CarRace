@@ -22,8 +22,8 @@ public class Menu {
         System.out.println("------------------------");
         System.out.println("\nChoisissez la voiture que vous voulez utiliser");
         System.out.println(" ");
-        System.out.println("Tapez 1 pour jouer avec la voiture rapide, elle a un risque de dysfonctionnement de 30%");
-        System.out.println("Tapez 2 pour jouer avec la voiture lente, elle a 50% de chance d'obtenir un boost");
+        System.out.println("Tapez 1 pour jouer avec la voiture rapide, elle a un risque de dysfonctionnement de 35%");
+        System.out.println("Tapez 2 pour jouer avec la voiture lente, elle a 25% de chance d'obtenir un boost");
         Scanner scan = new Scanner(System.in);
         do {
             var playerChoice = scan.nextLine();
