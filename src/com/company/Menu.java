@@ -2,6 +2,9 @@ package com.company;
 
 import org.fusesource.jansi.Ansi;
 import org.fusesource.jansi.AnsiConsole;
+import com.company.car.Car;
+import com.company.car.FastCar;
+import com.company.car.SlowCar;
 
 import java.util.Scanner;
 
@@ -9,9 +12,10 @@ import static org.fusesource.jansi.Ansi.ansi;
 
 public class Menu {
 
-    public static void startMenu(){
+    public static Car startMenu(){
         AnsiConsole.systemInstall();
         int playerInput;
+        Car car;
         System.out.println(" ");
         System.out.println("------------------------");
         System.out.println("Bienvenue dans la course");
@@ -54,7 +58,12 @@ public class Menu {
                 goodColor = true;
         } while (!goodColor);
 
-        StringBuilder buf = new StringBuilder();
-        System.out.println(buf.append ("Vous avez choisi la voiture de couleur : ").append(color).toString());
+        if (playerInput == 1)
+            car = new FastCar(color);
+        else
+            car = new SlowCar(color);
+
+        System.out.println("La course peut commencer");
+        return car;
     }
 }
