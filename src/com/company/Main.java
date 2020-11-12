@@ -10,7 +10,6 @@ public class Main {
     public static void main(String[] args) {
         AnsiConsole.systemInstall();
         int playerInput;
-        Car playerCar;
         System.out.println(" ");
         System.out.println("------------------------");
         System.out.println("Bienvenue dans la course");
