@@ -7,8 +7,8 @@ public class Car {
 
     Ansi.Color color;
     public float speed;
-    public int eventProba;
-    public boolean eventTest;
+    protected int eventProba;
+    protected boolean eventTest;
 
     /**
      * Constructeur de Car

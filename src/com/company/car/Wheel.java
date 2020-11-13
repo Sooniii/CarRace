@@ -84,25 +84,22 @@ public class Wheel extends Event{
      * Permet au pilote de se deplacer vers l'avant
      */
     private void goUp(){
-        System.out.println("Appuie sur U pour aller vers l'avant");
-        userWord = sc.next();
-        while (!userWord.equals("U")){
-            userWord = sc.next();
-            if (!userWord.equals("U")){
-                System.out.println("Ce n'est pas la bonne action");
-            }
-        }
+        userActions("Appuie sur U pour aller vers l'avant", "U");
     }
 
     /**
      * Permet au pilote de se deplacer vers l'arrière
      */
     private void goDown(){
-        System.out.println("Appuie sur D pour aller vers l'arrière");
+        userActions("Appuie sur D pour aller vers l'arrière", "D");
+    }
+
+    private void userActions(String s, String d) {
+        System.out.println(s);
         userWord = sc.next();
-        while (!userWord.equals("D")){
+        while (!userWord.equals(d)) {
             userWord = sc.next();
-            if (!userWord.equals("D")){
+            if (!userWord.equals(d)) {
                 System.out.println("Ce n'est pas la bonne action");
             }
         }
@@ -112,41 +109,20 @@ public class Wheel extends Event{
      * Permet au pilote de se deplacer vers la droite
      */
     private void goRight(String message){
-        System.out.println(message);
-        userWord = sc.next();
-        while (!userWord.equals("R")){
-            userWord = sc.next();
-            if (!userWord.equals("R")){
-                System.out.println("Ce n'est pas la bonne action");
-            }
-        }
+        userActions(message, "R");
     }
 
     /**
      * Permet au pilote de se deplacer vers la gauche
      */
     private void goLeft(String message){
-        System.out.println(message);
-        userWord = sc.next();
-        while (!userWord.equals("L")){
-            userWord = sc.next();
-            if (!userWord.equals("L")){
-                System.out.println("Ce n'est pas la bonne action");
-            }
-        }
+        userActions(message, "L");
     }
 
     /**
      * Permet au pilote de changer la roue
      */
     private void changeWheel(){
-        System.out.println("Appuie sur C pour changer la roue");
-        userWord = sc.next();
-        while (!userWord.equals("C")){
-            userWord = sc.next();
-            if (!userWord.equals("C")){
-                System.out.println("Ce n'est pas la bonne action");
-            }
-        }
+        userActions("Appuie sur C pour changer la roue", "C");
     }
 }
