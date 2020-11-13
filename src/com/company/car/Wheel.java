@@ -33,11 +33,11 @@ public class Wheel extends Event{
      */
     private void leftUpWheel(){
         System.out.println("Oh Non ! La roue avant gauche a crevé !");
-        exitCar();
+        goLeft("Appuie sur L pour sortir de la voiture");
         goUp();
         changeWheel();
         goDown();
-        backToCar();
+        goRight("Appuie sur R pour retourner dans la voiture et reprendre la course !");
     }
 
     /**
@@ -45,13 +45,13 @@ public class Wheel extends Event{
      */
     private void rightUpWheel(){
         System.out.println("Oh Non ! La roue avant droite a crevé !");
-        exitCar();
+        goLeft("Appuie sur L pour sortir de la voiture");
         goUp();
-        goRight();
+        goRight("Appuie sur R pour aller vers la droite");
         changeWheel();
-        goLeft();
+        goLeft("Appuie sur L pour aller vers la gauche");
         goDown();
-        backToCar();
+        goRight("Appuie sur R pour retourner dans la voiture et reprendre la course !");
     }
 
     /**
@@ -59,11 +59,11 @@ public class Wheel extends Event{
      */
     private void leftDownWheel(){
         System.out.println("Oh Non ! La roue arrière gauche a crevé !");
-        exitCar();
+        goLeft("Appuie sur L pour sortir de la voiture");
         goDown();
         changeWheel();
         goUp();
-        backToCar();
+        goRight("Appuie sur R pour retourner dans la voiture et reprendre la course !");
     }
 
     /**
@@ -71,13 +71,13 @@ public class Wheel extends Event{
      */
     private void rightDownWheel(){
         System.out.println("Oh Non ! La roue arrière droite a crevé !");
-        exitCar();
+        goLeft("Appuie sur L pour sortir de la voiture");
         goDown();
-        goRight();
+        goRight("Appuie sur R pour aller vers la droite");
         changeWheel();
-        goLeft();
+        goLeft("Appuie sur L pour aller vers la gauche");
         goUp();
-        backToCar();
+        goRight("Appuie sur R pour retourner dans la voiture et reprendre la course !");
     }
 
     /**
@@ -111,8 +111,8 @@ public class Wheel extends Event{
     /**
      * Permet au pilote de se deplacer vers la droite
      */
-    private void goRight(){
-        System.out.println("Appuie sur R pour aller vers la droite");
+    private void goRight(String message){
+        System.out.println(message);
         userWord = sc.next();
         while (!userWord.equals("R")){
             userWord = sc.next();
@@ -125,8 +125,8 @@ public class Wheel extends Event{
     /**
      * Permet au pilote de se deplacer vers la gauche
      */
-    private void goLeft(){
-        System.out.println("Appuie sur L pour aller vers la gauche");
+    private void goLeft(String message){
+        System.out.println(message);
         userWord = sc.next();
         while (!userWord.equals("L")){
             userWord = sc.next();
@@ -145,34 +145,6 @@ public class Wheel extends Event{
         while (!userWord.equals("C")){
             userWord = sc.next();
             if (!userWord.equals("C")){
-                System.out.println("Ce n'est pas la bonne action");
-            }
-        }
-    }
-
-    /**
-     * Permet au pilote de sortir de la voiture
-     */
-    private void exitCar(){
-        System.out.println("Appuie sur L pour sortir de la voiture");
-        userWord = sc.next();
-        while (!userWord.equals("L")){
-            userWord = sc.next();
-            if (!userWord.equals("L")){
-                System.out.println("Ce n'est pas la bonne action");
-            }
-        }
-    }
-
-    /**
-     * Permet au pilote de retourner a l'intérieur de la voiture
-     */
-    private void backToCar(){
-        System.out.println("Appuie sur R pour retourner dans la voiture et reprendre la course !");
-        userWord = sc.next();
-        while (!userWord.equals("R")){
-            userWord = sc.next();
-            if (!userWord.equals("R")){
                 System.out.println("Ce n'est pas la bonne action");
             }
         }
