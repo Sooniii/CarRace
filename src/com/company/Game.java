@@ -38,7 +38,7 @@ public class Game {
         }
         Console.clear();
         System.out.println("Merci d'avoir joué ! :D");
-        System.out.println("Tu as mis " + nbCycle + " secondes pour terminer la course");
+        System.out.println("Tu as mis " + nbCycle + " cycles pour terminer la course");
     }
 
     /**

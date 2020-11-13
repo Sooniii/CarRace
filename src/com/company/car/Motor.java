@@ -17,6 +17,7 @@ public class Motor extends Event{
         for (int i = 0; i < maxTab; i++) {
             nbList += r.nextInt(10);
         }
+        System.out.println("Oh non ! Le moteur est en panne !");
         System.out.println("Recopie cette suite de chiffre sans faute pour réparer ton moteur !");
         System.out.println(nbList);
         Scanner sc = new Scanner(System.in);
