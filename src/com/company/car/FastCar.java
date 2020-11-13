@@ -8,6 +8,10 @@ public class FastCar extends Car {
 
     Event event;
 
+    /**
+     * Constructeur de la voiture rapide
+     * @param color Couleur de la voiture (du texte ici)
+     */
     public FastCar(Ansi.Color color) {
         super(color);
         this.speed = 100;
@@ -15,6 +19,9 @@ public class FastCar extends Car {
         System.out.println("Vous avez choisi la voiture rapide de couleur " + color);
     }
 
+    /**
+     * Effectue les evenements pouvant survenir pendant la course
+     */
     @Override
     public void event() {
         super.event();

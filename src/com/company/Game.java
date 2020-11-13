@@ -12,12 +12,18 @@ public class Game {
     private float traveledDistance;
     private int nbCycle;
 
+    /**
+     * Constructeur du jeu
+     * @param car Prends la voiture crée par le joueur
+     */
     public Game(Car car) {
         this.car = car;
         startGame();
     }
 
-
+    /**
+     * Gere la boucle de jeu (la lance, l'actualise toutes les secondes et arrete le jeu quand il est finit)
+     */
     public void startGame(){
         while (!isFinish){
             Console.clear();
@@ -35,6 +41,10 @@ public class Game {
         System.out.println("Tu as mis " + nbCycle + " secondes pour terminer la course");
     }
 
+    /**
+     * Affiche là où le joueur en est dans la course ainsi que la distance restante
+     * Pareil pour le nombre de tour
+     */
     public void update(){
         traveledDistance += car.speed * 1000 / 60;
         if (traveledDistance >= distanceLap){

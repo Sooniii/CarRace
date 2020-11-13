@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 public class Motor extends Event{
 
+    /**
+     * Effectue les evenements pouvant survenir pendant la course
+     */
     @Override
     public void event() {
         super.event();

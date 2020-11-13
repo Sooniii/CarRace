@@ -7,6 +7,10 @@ public class SlowCar extends Car {
 
     private int cycleBoost;
 
+    /**
+     * Constructeur de la voiture rapide
+     * @param color Couleur de la voiture (du texte ici)
+     */
     public SlowCar(Ansi.Color color) {
         super(color);
         this.speed = 50;
@@ -14,6 +18,9 @@ public class SlowCar extends Car {
         System.out.println("Vous avez choisi la voiture lente de couleur " + color);
     }
 
+    /**
+     * Effectue les evenements pouvant survenir pendant la course
+     */
     @Override
     public void event() {
         super.event();

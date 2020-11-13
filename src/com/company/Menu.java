@@ -12,6 +12,11 @@ import static org.fusesource.jansi.Ansi.ansi;
 
 public class Menu {
 
+    /**
+     * Affiche le menu, permet de choisir la voiture que l'on veut
+     * ainsi que sa couleur, puis lance la partie
+     * @return La voiture choisi par le joueur
+     */
     public static Car startMenu(){
         AnsiConsole.systemInstall();
         int playerInput;
