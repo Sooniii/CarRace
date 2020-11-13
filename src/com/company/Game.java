@@ -1,6 +1,7 @@
 package com.company;
 import com.company.car.Car;
 import com.company.car.FastCar;
+import com.company.car.SlowCar;
 
 import java.util.Random;
 
@@ -51,7 +52,7 @@ public class Game {
             update();
             if (boostTime && cycleBoost < 4) {
                 cycleBoost += 1;
-            } else {
+            } else if (car instanceof SlowCar){
                 boostTime = false;
                 car.speed = 50;
             }
@@ -63,6 +64,7 @@ public class Game {
         }
         Console.clear();
         System.out.println("Merci d'avoir joué ! :D");
+        System.out.println("Tu as mis " + nbCycle + " secondes pour terminer la course");
     }
 
     public void update(){
