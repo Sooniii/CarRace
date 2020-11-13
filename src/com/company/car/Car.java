@@ -7,6 +7,7 @@ public class Car {
 
     Ansi.Color color;
     public float speed;
+    public int eventProba;
     public boolean eventTest;
 
 
@@ -19,14 +20,6 @@ public class Car {
         System.out.println("Ma vitesse est de : " + speed + "km/h");
     }
 
-    public void event1(){
-    }
-
-    public void event2(){
-
-    }
-
-    public boolean getEventTest(){
-        return eventTest;
+    public void event(){
     }
 }
