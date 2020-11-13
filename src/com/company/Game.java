@@ -29,7 +29,6 @@ public class Game {
             car.write();
             Random r = new Random();
             eventNumber = r.nextInt(101);
-            System.out.println(eventNumber);
             if (car instanceof FastCar){
                 if (eventNumber < 35) {
                         int randomEvent = r.nextInt(2);
